@@ -1,0 +1,31 @@
+
+.result {
+  margin-top: 25px;
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  pre {
+    margin: 0;
+    background: #303030;
+    color: #f1f1f1;
+    padding: 10px 16px;
+    counter-reset: line;
+
+    span {
+      display: block;
+      line-height: 1.5rem;
+
+      &:before {
+        counter-increment: line;
+        content: counter(line);
+        display: inline-block;
+        padding: 0 0.5em;
+        margin-right: 0.5em;
+        color: #888;
+        width: 30px;
+      }
+    }
+  }
+}
